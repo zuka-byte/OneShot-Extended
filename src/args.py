@@ -87,11 +87,6 @@ Copyright (C) 2026 chickendrop89
         help='Write credentials to the file on success'
     )
     opt_group.add_argument(
-        '-s', '--save',
-        action='store_true',
-        help='Save the AP to network manager on success'
-    )
-    opt_group.add_argument(
         '-l', '--loop',
         action='store_true',
         help='Run in a loop'

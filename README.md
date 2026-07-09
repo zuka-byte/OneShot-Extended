@@ -10,7 +10,6 @@ This is an improved version of the original OneShot
 
 ## Advantages over original OneShot
  - Highlighting of a vulnerable WPS version (`1.0`) in the scanner
- - Ability to save the AP right into the Network Manager of your system
  - Ability to kill/restore interfering processes using the same interface
  - Minor changes (e.g, `WPA3TM` indication, better `vulnwsc` detection, `RF-Kill` handling)
  - Improved Scanner reliability (retries, `up` detection, `lock` detection)
@@ -24,7 +23,6 @@ This is an improved version of the original OneShot
  - [Online WPS bruteforce](https://sviehb.files.wordpress.com/2011/12/viehboeck_wps.pdf)
  - Offline WPS PIN generating algorithm
  - Wi-Fi scanner with highlighting based on iw;
- - Ability to save the AP to network manager
  - Ability to write to a file
 
 ## Usage
@@ -46,7 +44,6 @@ Optional arguments:
   -k, --kill            Automatically kill processes interfering with the wireless interface
   -r, --restore         Restore killed interfering processes on exit (--kill)
   -w, --write           Write credentials to the file on success
-  -s, --save            Save the AP to network manager on success
   -l, --loop            Run in a loop
   -c, --clear           Clear the screen on every wi-fi scan
   -d, --delay DELAY     Set a delay between pin attempts in seconds (default: 0)

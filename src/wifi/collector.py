@@ -28,46 +28,6 @@ class WiFiCollector:
     def __init__(self):
         self.ANDROID_NETWORK = src.wifi.android.AndroidNetwork()
 
-    def addNetwork(self, bssid: str, essid: str, wpa_psk: str):
-        """Ads a network to systems network manager."""
-
-        android_connect_cmd = ['cmd']
-        android_connect_cmd.extend([
-            '-w', 'wifi',
-            'connect-network', f"{essid}",
-            'wpa2', f"{wpa_psk}", 
-            '-b', f"{bssid}"
-        ])
-
-        networkmanager_connect_cmd = ['nmcli']
-        networkmanager_connect_cmd.extend([
-            'connection', 'add', 
-            'type', 'wifi', 
-            'con-name', f"{essid}",
-            'ssid', f"{essid}", 
-            'wifi-sec.psk', f"{wpa_psk}",
-            'wifi-sec.key-mgmt', 'wpa-psk'
-        ])
-
-        # Detect an android system
-        if src.utils.isAndroid() is True:
-            try:
-                # The Wi-Fi scanner needs to be active in order to add network
-                self.ANDROID_NETWORK.enableWifi(force_enable=True, whisper=True)
-                subprocess.run(android_connect_cmd, check=True)
-            except subprocess.CalledProcessError as error:
-                return logger.info(f'[!] Failed to add network to Android network manager: \n {error}')
-
-        # Detect NetworkManager
-        elif which('nmcli'):
-            try:
-                subprocess.run(networkmanager_connect_cmd, check=True)
-            except subprocess.CalledProcessError as error:
-                return logger.info(f'[!] Failed to add network to NetworkManager: \n {error}')
-
-
-        logger.info('[*] Access Point was saved to your network manager')
-
     @staticmethod
     def writeResult(bssid: str, essid: str, wps_pin: str, wpa_psk: str):
         """Writes the success result to a stored.{txt,csv} file."""

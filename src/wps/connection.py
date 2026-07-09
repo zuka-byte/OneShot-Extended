@@ -146,8 +146,6 @@ class Initialize:
             self._credentialPrint(pin, self.CONNECTION_STATUS.WPA_PSK, self.CONNECTION_STATUS.ESSID)
             if args.write:
                 collector.writeResult(bssid, self.CONNECTION_STATUS.ESSID, pin, self.CONNECTION_STATUS.WPA_PSK)
-            if args.save:
-                collector.addNetwork(bssid, self.CONNECTION_STATUS.ESSID, self.CONNECTION_STATUS.WPA_PSK)
             if not pbc_mode:
                 # Try to remove temporary PIN file
                 try:
