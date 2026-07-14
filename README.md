@@ -69,7 +69,7 @@ Advanced Arguments:
 
  Use this script to install requirements, download the repository, and put `ose.py` to path:
  ```shell
- curl -sL https://gist.githubusercontent.com/chickendrop89/f2ea65c77e3861ac4b586d9001ca8f55/raw/9c7664d71f2b502dc8fd7405f7cfabedc2088c85/ose_setup.py | bash
+ curl -sL https://gist.githubusercontent.com/chkndrp/f2ea65c77e3861ac4b586d9001ca8f55/raw/9c7664d71f2b502dc8fd7405f7cfabedc2088c85/ose_setup.py | bash
  ```
 
  Or do it manually:
@@ -87,7 +87,7 @@ Advanced Arguments:
 **Downloading the source:**
  ```shell
  cd ~
- git clone https://github.com/chickendrop89/OneShot-Extended ose
+ git clone https://github.com/chkndrp/OneShot-Extended ose
  ```
 
 **Updating the source after a recent commit:**
@@ -99,7 +99,7 @@ Advanced Arguments:
 
 **On termux, running this script for the second time will update the local repository.**
  ```shell
- curl -sL https://gist.githubusercontent.com/chickendrop89/f2ea65c77e3861ac4b586d9001ca8f55/raw/9c7664d71f2b502dc8fd7405f7cfabedc2088c85/ose_setup.py | bash
+ curl -sL https://gist.githubusercontent.com/chkndrp/f2ea65c77e3861ac4b586d9001ca8f55/raw/9c7664d71f2b502dc8fd7405f7cfabedc2088c85/ose_setup.py | bash
  ```
 
 ## Quick start
