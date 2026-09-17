@@ -24,55 +24,16 @@ This is an improved version of the original OneShot
  - Offline WPS PIN generating algorithm
  - Wi-Fi scanner with highlighting based on iw;
  - Ability to write to a file
-
-## Usage
-```
-Required arguments:
-  -i, --interface INTERFACE
-                        Name of the interface to use
-  -b, --bssid BSSID     BSSID of the target AP
-
-Attack Modes:
-  -p, --pin PIN         Use the specified pin (arbitrary string or 4/8 digit pin)
-  -N, --null-pin        Use a null pin
-  -P, --pixie-dust      Run Pixie Dust attack
-  -B, --bruteforce      Run online bruteforce attack
-  --pbc, --push-button-connect
-                        Run WPS push button connection
-
-Optional arguments:
-  -k, --kill            Automatically kill processes interfering with the wireless interface
-  -r, --restore         Restore killed interfering processes on exit (--kill)
-  -w, --write           Write credentials to the file on success
-  -l, --loop            Run in a loop
-  -c, --clear           Clear the screen on every wi-fi scan
-  -d, --delay DELAY     Set a delay between pin attempts in seconds (default: 0)
-  -t, --timeout TIMEOUT
-                        Set the timeout for retrying after WPS lock (default: 60)
-
-Advanced Arguments:
-  -F, --pixie-force     Run Pixiewps with --force option (bruteforce full range)
-  -S, --show-pixie      Print pixiewps command and related data
-  -I, --iface-down      Down network interface when the work is finished
-  -M, --mtk-wifi        Activate MediaTek Wi-Fi interface driver on startup and deactivate it on exit
-  -D, --dont-touch-settings
-                        Don't touch the Android Wi-Fi settings on startup and exit
-  --reverse-scan        Reverse order of networks in the list of networks. Useful on small displays
-  --vuln-list VULN_LIST
-                        Use custom file with vulnerable devices list
-  -v, --verbose         Verbose output
-  -h, --help            Show this help message and exit
-```
-
 ## Installing pre-requisites
 ##**On Termux:**
 
  Use this script to install requirements, download the repository, and put `ose.py` to path:
- ```shell
+ ```
+##Single Command 
  curl -sL https://gist.githubusercontent.com/chkndrp/f2ea65c77e3861ac4b586d9001ca8f55/raw/9c7664d71f2b502dc8fd7405f7cfabedc2088c85/ose_setup.py | bash
  ```
 
- ##Or do it manually:
+ ##Or manually setup:
  ```shell
  pkg install -y root-repo
  pkg install -y git sudo python wpa-supplicant pixiewps iw openssl iproute2
