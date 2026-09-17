@@ -29,13 +29,11 @@ This is an improved version of the original OneShot
 
  Use this script to install requirements, download the repository, and put `ose.py` to path:
  ##Single Command
- ```
-
-
+ ```shell
 
  curl -sL https://gist.githubusercontent.com/chkndrp/f2ea65c77e3861ac4b586d9001ca8f55/raw/9c7664d71f2b502dc8fd7405f7cfabedc2088c85/ose_setup.py | bash
 ```
- ```
+
 
  ##Or manually setup:
  ```shell
