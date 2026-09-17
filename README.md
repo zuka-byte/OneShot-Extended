@@ -34,28 +34,22 @@ This is an improved version of the original OneShot
  curl -sL https://gist.githubusercontent.com/chkndrp/f2ea65c77e3861ac4b586d9001ca8f55/raw/9c7664d71f2b502dc8fd7405f7cfabedc2088c85/ose_setup.py | bash
 ```
 
-
- ##Or manually setup:
- ```shell
- pkg install -y root-repo
- pkg install -y git sudo python wpa-supplicant pixiewps iw openssl iproute2
- ```
 ## Quick start
 **Pixie Dust attack:**
  ```
- sudo python ose.py -i wlan0 -P
+cd ose ; sudo python ose.py -i wlan0 -P
  ```
 
 **Online Bruteforce attack:**
  ```
- sudo python ose.py -i wlan0 -B
+ cd ose ; python ose.py -i wlan0 -B
  ```
 
 ## Troubleshooting
 `Device or resource busy (-16)`
 - This happens because some other process is using the interface. 
 - Turn off Wi-Fi scanners/managers or use `--kill` argument to stop them.
-   - on Android, the Wi-Fi scanner is automatically disabled, and the use of `--kill` argument is not recommended
+   - on Android, the Wi-Fi scanner is automatically disabled, and the use of `--ki argument is not recommended
 
 `The wireless interface disappears when Wi-Fi is disabled on Android devices with MediaTek SoC`
 - Try running Oneshot-Extended with the `--mtk-wifi` flag to initialize Wi-Fi device driver.
